@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -7,59 +7,8 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
   
-    <!-- <span style="font-size: 12px;">Tra cứu đáp án phục vụ mục đích học tập và nâng cao chuyển môn ghi nhớ  sản phẩm phục vụ cho mục đích học tập và ghi nhớ câu hỏi và câu trả lời - không khuyến khích sử dụng trong lúc thi </span>
- 
-  <div class="pika" style="
-    width: 3em;
-    font-size: 10px;
-    /* opacity: 0.35; */
-    position: relative;
-    left: 20rem;
-">
-	<div class="pika-head">
-		<div class="pika-face">
-			<div class="pika-eye pika-eye-left"></div>
-			<div class="pika-eye pika-eye-right"></div>
-			<div class="pika-nose"></div>
-			<div class="pika-mouth">
-				<div class="pika-mouth-outline"></div>
-				<div class="pika-mouth-inner"></div>
-			</div>
-			<div class="pika-cheek pika-cheek-left"></div>
-			<div class="pika-cheek pika-cheek-right"></div>
-		</div>
-		<div class="pika-ear pika-ear-left"></div>
-		<div class="pika-ear pika-ear-right"></div>
-	</div>
-	<div class="pika-body">
-		<div class="pika-arm pika-arm-left">
-			<div class="pika-fingers"></div>
-		</div>
-		<div class="pika-arm pika-arm-right">
-			<div class="pika-fingers"></div>
-			<div class="pika-arm-shadow"></div>
-		</div>
-		<div class="pika-torso">
-			<div class="pika-torso-shadow"></div>
-			<div class="pika-back-stripes"></div>
-			<div class="pika-leg"></div>
-		</div>
-		<div class="pika-tail pika-tail-1">
-			<div class="pika-tail pika-tail-2">
-				<div class="pika-tail pika-tail-3">
-					<div class="pika-tail pika-tail-4">
-						<div class="pika-tail pika-tail-5"></div>
-					</div>
-				</div>
-				<div class="pika-tail-2-highlight"></div>
-			</div>
-		</div>
-	</div>
-	<div class="pika-surf">
-		<div class="pika-surf-highlight"></div>
-	</div>
-</div> -->
-  <!-- Ô tìm kiếm -->
+  
+
   <input
     id="searchBox"
     type="text"
@@ -67,7 +16,7 @@
     class="w-full max-w-lg p-3 border rounded-2xl shadow-sm focus:ring focus:ring-blue-300 outline-none mb-6"
   />
 
-  <!-- Kết quả -->
+
   <div id="resultContainer" class="space-y-4 w-full max-w-2xl"></div>
 
   
@@ -620,4 +569,51 @@ body {
 }
 
 </style>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Tool</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+<div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+
+  <h1 class="text-2xl font-bold mb-4">Quiz Tool</h1>
+
+  <!-- Form nhập câu hỏi -->
+  <div class="mb-6">
+    <label class="block mb-1 font-semibold">Câu hỏi</label>
+    <textarea id="questionInput" rows="3" placeholder="Nhập câu hỏi" class="w-full p-2 border rounded mb-2"></textarea>
+
+    <label class="block mb-1 font-semibold">Câu trả lời đúng</label>
+    <textarea id="answerInput" rows="2" placeholder="Nhập câu trả lời đúng" class="w-full p-2 border rounded mb-2"></textarea>
+
+    <button id="addQuestionBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Thêm câu hỏi</button>
+  </div>
+
+  <!-- Tìm kiếm -->
+  <div class="mb-6">
+    <input id="searchInput" type="text" placeholder="Tìm kiếm câu hỏi..." class="w-full p-2 border rounded"/>
+  </div>
+
+  <!-- Danh sách câu hỏi -->
+  <div id="questionList" class="space-y-2">
+    <!-- Các câu hỏi sẽ hiển thị ở đây -->
+  </div>
+
+  <!-- Nút tải file JSON -->
+  <button id="downloadBtn" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Tải JSON</button>
+  <input type="file" id="importJson" accept="application/json" class="border p-2 rounded" />
+<button id="importBtn" class="bg-blue-500 text-white px-3 py-1 rounded">Import JSON</button>
+
+
+</div>
+
+<script src="quiz-tool.js"></script>
+</body>
 </html>
